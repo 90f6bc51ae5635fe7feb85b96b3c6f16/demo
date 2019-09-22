@@ -112,14 +112,7 @@ session_start();
                                 </div>
                                 <div align="center" id="error" name="error" style="color:#F00;padding:8px;">
                                     
-                                </div>
-                                <!--
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
-                                    </label>
-                                </div>-->
-                                <!-- Change this to a button or input when using this as a form -->
+                                </div> 
                                 <button type="submit" name="login_btn" class="btn btn-lg btn-danger btn-block">Login</button>
                                 <a href="../" class="btn btn-lg btn-default btn-block" >Go to home</a>
                             </fieldset>
