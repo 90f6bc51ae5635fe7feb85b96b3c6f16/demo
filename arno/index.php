@@ -1,10 +1,7 @@
 <?
 
 session_start();
-
-require_once('models/CompanyModel.php');
-$company_model = new CompanyModel;
-$company=$company_model->getCompanyByID('1'); 
+ 
 ?>
 
 
@@ -29,7 +26,7 @@ $company=$company_model->getCompanyByID('1');
     gtag('config', 'UA-132661003-1');
     </script>
 
-    <title><?PHP echo $company['company_name_en']; ?> ERP System</title>
+    <title> ERP System Demo</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="template/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

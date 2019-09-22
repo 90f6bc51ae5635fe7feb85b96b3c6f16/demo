@@ -3,22 +3,16 @@ require_once('../models/UserModel.php');
 require_once('../models/CustomerModel.php');
 require_once('../models/CustomerTypeModel.php');
 require_once('../models/CustomerSizeModel.php');
-require_once('../models/CustomerGroupModel.php');
-require_once('../models/InvoiceCustomerModel.php');
-require_once('../models/AccountModel.php');
-require_once('../models/CurrencyModel.php');
+require_once('../models/CustomerGroupModel.php'); 
 
 $path = "modules/my_customer/views/";
 $target_dir = "../upload/customer/";
-
-$invoice_customer_model = new InvoiceCustomerModel;
-$currency_model = new CurrencyModel;
+ 
 $customer_type_model = new CustomerTypeModel;
 $customer_size_model = new CustomerSizeModel;
 $customer_group_model = new CustomerGroupModel;
 $model_user = new UserModel;
-$customer_model = new CustomerModel;
-$account_model = new AccountModel;
+$customer_model = new CustomerModel; 
 
 $customer_id = $_GET['id'];
 
@@ -67,9 +61,7 @@ if(!isset($_GET['action'])){
 
 }else if ($_GET['action'] == 'insert'){
 
-    $user = $model_user->getUserBy('','sale');
-    $account = $account_model->getAccountNode();
-    $currency = $currency_model->getCurrencyBy();
+    $user = $model_user->getUserBy('','sale'); 
     $customer_types = $customer_type_model->getCustomerTypeBy();
     $customer_sizes = $customer_size_model->getCustomerSizeBy();
     $customer_groups = $customer_group_model->getCustomerGroupBy();
