@@ -61,36 +61,21 @@ session_start();
             <h1>Arno Group ERP Systems</h1>
             </div>
         </div>
-        <div class="row" style="padding:48px;">
-            <div class="col-md-3 " align="center">
+        <div class="row " style="padding:48px;">
+            <div class="col-md-4 offset-3" align="center">
+                
+            </div>
+            <div class="col-md-4 offset-3" align="center">
                 <a href="arno/" class="card-edit">
                     <div  >
                         <img class="img-responsive" src="uploads/logo/arno.jpg" width="160" alt="Card image cap">
                     </div>
                 </a> 
             </div>
-            <div class="col-md-3 " align="center">
-                <a href="tool-management/" class="card-edit">
-                    <div style="width:160">
-                        <img class="img-responsive" src="uploads/logo/tool-management.jpg" width="160" alt="Card image cap">
-                    </div>
-                </a>
+            <div class="col-md-4 offset-3" align="center">
+                
             </div>
-            <div class="col-md-3 " align="center">
-                <a href="partner-chips/" class="card card-edit">
-                    <div >
-                        <img class="img-responsive" src="uploads/logo/partner-chips.jpg" width="160" alt="Card image cap">
-                    </div>
-                </a>
-            </div>
-            
-            <div class="col-md-3" align="center">
-                <a href="best-machine/" class="card-edit">
-                    <div style="width:160">
-                        <img class="img-responsive" src="uploads/logo/best-machine.png" width="160" alt="Card image cap">
-                    </div>
-                </a>
-            </div>
+             
         </div>
     </div>
 
