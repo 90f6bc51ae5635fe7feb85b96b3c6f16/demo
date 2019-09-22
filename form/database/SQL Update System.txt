@@ -1,0 +1,26 @@
+UPDATE tb_journal_purchase SET journal_purchase_code = (SELECT invoice_supplier_code_gen FROM tb_invoice_supplier WHERE invoice_supplier_id =tb_journal_purchase.invoice_supplier_id)
+UPDATE tb_journal_sale SET journal_sale_code = (SELECT invoice_customer_code FROM tb_invoice_customer WHERE invoice_customer_id =tb_journal_sale.invoice_customer_id)
+
+
+
+///--------------------------------------------------------------------------------- 2018 - 10 - 31 ---------------------------------------------------------------------------------- 
+ALTER TABLE `tb_billing_note` ADD `billing_note_branch` VARCHAR(100) NOT NULL COMMENT 'สาขา' AFTER `billing_note_tax`;
+ALTER TABLE `tb_credit_note` ADD `credit_note_branch` VARCHAR(100) NOT NULL COMMENT 'สาขา' AFTER `credit_note_tax`;
+ALTER TABLE `tb_debit_note` ADD `debit_note_branch` VARCHAR(100) NOT NULL COMMENT 'สาขา' AFTER `debit_note_tax`;
+ALTER TABLE `tb_finance_debit` ADD `finance_debit_branch` VARCHAR(100) NOT NULL COMMENT 'สาขา' AFTER `finance_debit_tax`;
+ALTER TABLE `tb_finance_credit` ADD `finance_credit_branch` VARCHAR(100) NOT NULL COMMENT 'สาขา' AFTER `finance_credit_tax`;
+
+
+//---------------------------------------------------------------------------------- 2018-11-05 --------------------------------------------------------------------------------------
+ALTER TABLE `tb_purchase_order` CHANGE `purchase_order_total` `purchase_order_total_price` DOUBLE NOT NULL, CHANGE `purchase_order_vat` `purchase_order_vat_price` DOUBLE NOT NULL, CHANGE `purchase_order_net` `purchase_order_net_price` DOUBLE NOT NULL;
+ALTER TABLE `tb_purchase_order` ADD `purchase_order_vat` DOUBLE NOT NULL AFTER `purchase_order_total_price`;
+
+
+//--------------------------------------------------------------------------  Update invoice supplier  ----------------------------------------------------------------------------------------
+
+UPDATE tb_invoice_supplier 
+SET invoice_supplier_name = (SELECT supplier_name_en FROM tb_supplier WHERE supplier_id = tb_invoice_supplier.supplier_id) , 
+invoice_supplier_tax = (SELECT supplier_tax FROM tb_supplier WHERE supplier_id = tb_invoice_supplier.supplier_id) ,
+invoice_supplier_branch = (SELECT supplier_branch FROM tb_supplier WHERE supplier_id = tb_invoice_supplier.supplier_id) ,
+invoice_supplier_address = (SELECT CONCAT(supplier_address_1,' ',supplier_address_2,' \n ',supplier_address_3,' ',supplier_zipcode) FROM tb_supplier WHERE supplier_id = tb_invoice_supplier.supplier_id)
+WHERE invoice_supplier_begin != '2'

@@ -1,0 +1,29 @@
+.body-panel {
+    height: 800px;
+    overflow: hidden;
+}
+
+.body-panel:hover {
+    overflow-y: scroll;
+}
+
+.scroll1::-webkit-scrollbar {
+    width: 5px;
+}
+
+.scroll1::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
+.scroll1::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
+.sticky-top {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    /* background: #337ab7; */
+    padding: 10px;
+    z-index: 1000;
+}

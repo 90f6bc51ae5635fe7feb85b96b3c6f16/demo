@@ -1,0 +1,311 @@
+div.zabuto_calendar {
+    margin: 0;
+    padding: 0;
+}
+
+div.zabuto_calendar .table {
+    width: 100%;
+    margin: 0;
+    padding: 0
+}
+
+div.zabuto_calendar .table th,
+div.zabuto_calendar .table td {
+    padding: 4px 2px;
+    text-align: center
+}
+
+div.zabuto_calendar .table tr th,
+div.zabuto_calendar .table tr td {
+    background-color: #fff
+}
+
+div.zabuto_calendar .table tr:last-child {
+    border-bottom: 1px solid #ddd
+}
+
+div.zabuto_calendar .table tr.calendar-month-header td {
+    background-color: #fafafa;
+    font-weight: bold
+}
+
+div.zabuto_calendar .table tr.calendar-month-header td span {
+    cursor: pointer;
+    display: inline-block;
+    padding-bottom: 10px
+}
+
+div.zabuto_calendar .table tr.calendar-month-header td {
+    padding-top: 12px;
+    padding-bottom: 4px
+}
+
+div.zabuto_calendar .table-bordered tr.calendar-month-header td {
+    border-left: 0;
+    border-right: 0
+}
+
+div.zabuto_calendar .table-bordered tr.calendar-month-header td:first-child {
+    border-left: 1px solid #ddd
+}
+
+div.zabuto_calendar div.calendar-month-navigation {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px
+}
+
+div.zabuto_calendar .table tr.calendar-dow-header th {
+    background-color: #f0f0f0
+}
+
+div.zabuto_calendar tr.calendar-dow-header th,
+div.zabuto_calendar tr.calendar-dow td {
+    width: 14%
+}
+
+div.zabuto_calendar .table tr td div.day {
+    margin: 0;
+    padding-top: 7px;
+    padding-bottom: 7px
+}
+
+div.zabuto_calendar .table tr td.event div.day,
+div.zabuto_calendar ul.legend li.event {
+    background-color: #fff0c3
+}
+
+div.zabuto_calendar .table tr td.dow-clickable,
+div.zabuto_calendar .table tr td.event-clickable {
+    cursor: pointer
+}
+
+div.zabuto_calendar .badge-today,
+div.zabuto_calendar div.legend span.badge-today {
+    color: #fff;
+    text-shadow: none
+}
+
+div.zabuto_calendar .badge-today {
+    display: block;
+    float: right;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right:2px; 
+}
+
+
+
+
+div.zabuto_calendar .badge-event,
+div.zabuto_calendar div.legend span.badge-event {
+    color: #fff;
+    text-shadow: none
+}
+
+div.zabuto_calendar .badge-event {
+    display: block;
+    float: right;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right:2px; 
+}
+
+
+div.zabuto_calendar .badge-invoice,
+div.zabuto_calendar div.legend span.badge-invoice {
+    color: #fff;
+    text-shadow: none
+}
+
+div.zabuto_calendar .badge-invoice {
+    display: block;
+    float: right;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right:2px; 
+}
+
+
+div.zabuto_calendar .badge-bill,
+div.zabuto_calendar div.legend span.badge-bill {
+    background-color: #04f792;
+    color: #fff;
+    text-shadow: none
+}
+
+div.zabuto_calendar .badge-bill {
+    display: block;
+    float: right;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right:2px; 
+}
+
+
+
+
+div.zabuto_calendar div.legend {
+    margin-top: 5px;
+    text-align: right
+}
+
+div.zabuto_calendar div.legend span {
+    color: #999;
+    font-size: 10px;
+    font-weight: normal
+}
+
+div.zabuto_calendar div.legend span.legend-text:after,
+div.zabuto_calendar div.legend span.legend-block:after,
+div.zabuto_calendar div.legend span.legend-list:after,
+div.zabuto_calendar div.legend span.legend-spacer:after {
+    content: ' '
+}
+
+div.zabuto_calendar div.legend span.legend-spacer {
+    padding-left: 25px
+}
+
+div.zabuto_calendar ul.legend>span {
+    padding-left: 2px
+}
+
+div.zabuto_calendar ul.legend {
+    display: inline-block;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0
+}
+
+div.zabuto_calendar ul.legend li {
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+    margin-left: 5px
+}
+
+div.zabuto_calendar ul.legend,
+div.zabuto_calendar ul.legend li:first-child {
+    margin-left: 7px
+}
+
+div.zabuto_calendar ul.legend li:last-child {
+    margin-right: 5px
+}
+
+div.zabuto_calendar div.legend span.badge {
+    font-size: .9em;
+    border-radius: 5px 5px 5px 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 3px
+}
+
+div.zabuto_calendar div.legend span.event {
+    display: block;
+    float: right;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+}
+
+.date-select{
+    display:inline-block;
+    width:16px;
+    height:16px;
+    border-radius:8px;
+    
+    margin: 0px 4px;
+}
+
+.color-event{
+    background:#ff9b08;
+}
+
+.color-today{
+    background:#357ebd;
+}
+
+.color-bill{
+    background:#04f792;
+}
+
+.color-invoice{
+    background:#f70419;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover{
+    text-decoration: none;
+}
+
+.mouse-today {
+	cursor: url('../images/point-today.png') 16 18, auto;
+}
+
+.mouse-event {
+	cursor: url('../images/point-event.png') 16 18, auto;
+}
+
+.mouse-invoice {
+	cursor: url('../images/point-invoice.png') 16 18, auto;
+}
+
+.mouse-bill {
+	cursor: url('../images/point-bill.png') 16 18, auto;
+}
+
+
+div.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+div.fixed div.fixed-header{
+    font-size: 32px;
+    padding: 8px;
+    display: block;
+    float: left;
+    background:rgba(115,173,33,0.4);
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+
+}
+
+div.fixed div.fixed-body{
+   
+    display: none;
+    float: left;
+    padding: 8px;
+    border: 1px solid #73AD21;
+    background: #FFF;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+div.fixed .active{
+    display: block !important;
+}
+
+
+@media(max-width:979px) {
+    div.zabuto_calendar .table th,
+    div.zabuto_calendar .table td {
+        padding: 2px 1px
+    }
+}
